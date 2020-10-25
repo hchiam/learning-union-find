@@ -43,3 +43,9 @@ Read the section on union-find data structure in ["The Algorithm Design Manual" 
 <https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf>
 
 <https://en.wikipedia.org/wiki/Disjoint-set_data_structure>
+
+## Example
+
+```bash
+node example.js
+```
