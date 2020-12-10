@@ -20,12 +20,12 @@ node example.js
 
 This is my attempt to better summarize my earlier notes:
 
-| Set implementation                          | Get all in set | Intersection/union | Find which set x is in     | In 1 set, find x        | Move x to another set |
-| ------------------------------------------- | -------------- | ------------------ | -------------------------- | ----------------------- | --------------------- |
-| `{:}`                                       | `O(n)`         | `O(n)`             | `O(kn)` or `O(k log n)` \* | `O(n)` or `O(log n)` \* | `O(1)`                |
-| bits `[,,]`                                 | `O(n)`         | `O(n)`             | `O(k)`                     | `O(1)`                  | `O(1)`                |
-| binary tree root as set                     | `O(n)`         | `O(n) ?`           | `O(k log n)`               | `O(log n)`              | `O(log n) ?`          |
-| root as set, but all children point parents | `?`            | `O(~1)`            | `O(~k)` \*\*               | `O(~1)` \*\*            | `?`                   |
+| Set implementation                          | Get all in set | Intersection / union | Find which set x is in     | In 1 set, find x        | Move x to another set |
+| ------------------------------------------- | -------------- | -------------------- | -------------------------- | ----------------------- | --------------------- |
+| `{:}`                                       | `O(n)`         | `O(n)`               | `O(kn)` or `O(k log n)` \* | `O(n)` or `O(log n)` \* | `O(1)`                |
+| bits `[,,]`                                 | `O(n)`         | `O(n)`               | `O(k)`                     | `O(1)`                  | `O(1)`                |
+| binary tree root as set                     | `O(n)`         | `O(n) ?`             | `O(k log n)`               | `O(log n)`              | `O(log n) ?`          |
+| root as set, but all children point parents | `?`            | `O(~1)`              | `O(~k)` \*\*               | `O(~1)` \*\*            | `?`                   |
 
 - where `n` = number of items in an average set ; `k` = number of all sets
 - note that the last option is unable to break up a set, and each option has tradeoffs/pros/cons like flexibility of memory
