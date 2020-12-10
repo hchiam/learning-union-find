@@ -10,6 +10,12 @@ Implement sets with fast set membership checks _and_ fast set unions/intersectio
 
 Children point to parents. Root parent represents the set. When combining sets, always merge into the taller tree (to guarantee logarithmic height). Use path compression to flatten the tree on each find (along the search path), to speed up traversal from `O(log n)` to `O(1)`.
 
+## Example
+
+```bash
+node example.js
+```
+
 ## Option comparison summary
 
 This is my attempt to summarize my earlier notes:
@@ -57,9 +63,3 @@ Read the section on union-find data structure in ["The Algorithm Design Manual" 
 <https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf>
 
 <https://en.wikipedia.org/wiki/Disjoint-set_data_structure>
-
-## Example
-
-```bash
-node example.js
-```
