@@ -34,6 +34,18 @@ Meanwhile for the union-find data structure:
 - :) [near `O(1)`](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#:~:text=near%20constant%20amortized%20time) for getting set unions and set intersections (just make one root point to the other root, preferably into the taller tree to guarantee logarithmmic height)
 - :( disadvantage: doesn't support breaking up a set that was created by unions :( but usually not an issue/requirement apparently :)
 
+## Attempted summary
+
+| set implementation                          | get all in set | intersection/union | find which set x is in                                  | in 1 set, find x                                     | move to another set |
+| ------------------------------------------- | -------------- | ------------------ | ------------------------------------------------------- | ---------------------------------------------------- | ------------------- |
+| `{:}`                                       | `O(n)`         | `O(n)`             | `O(kn)` or `O(k log n)` with sorted keys implementation | `O(n)` or `O(log n)` with sorted keys implementation | `O(1)`              |
+| bits `[,,]`                                 | `O(n)`         | `O(n)`             | `O(k)`                                                  | `O(1)`                                               | `O(1)`              |
+| binary tree root as set                     | `O(n)`         | `O(n) ?`           | `O(k log n)`                                            | `O(log n)`                                           | `O(log n) ?`        |
+| root as set, but all children point parents | `?`            | `O(~1)`            | `O(~k)` if use path compression                         | `O(~1)` if use path compression                      | `?`                 |
+
+- where `n` = number of items in an average set ; `k` = number of all sets
+- note that the last option is unable to break up a set
+
 ## Reference
 
 Read the section on union-find data structure in ["The Algorithm Design Manual" by Steven Skiena](http://www.algorist.com).
