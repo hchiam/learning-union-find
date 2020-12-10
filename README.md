@@ -10,7 +10,9 @@ Implement sets with fast set membership checks _and_ fast set unions/intersectio
 
 Children point to parents. Root parent represents the set. When combining sets, always merge into the taller tree (to guarantee logarithmic height). Use path compression to flatten the tree on each find (along the search path), to speed up traversal from `O(log n)` to `O(1)`.
 
-## Attempted option comparison summary
+## Option comparison summary
+
+This is my attempt to summarize my earlier notes:
 
 | set implementation                          | get all in set | intersection/union | find which set x is in                                  | in 1 set, find x                                     | move to another set |
 | ------------------------------------------- | -------------- | ------------------ | ------------------------------------------------------- | ---------------------------------------------------- | ------------------- |
