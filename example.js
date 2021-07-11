@@ -1,4 +1,4 @@
-function SetNode(value, setName) {
+function SetNode(value, setName = value) {
   this.value = value;
   this.parent = null;
   this.setName = setName;
