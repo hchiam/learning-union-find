@@ -23,29 +23,29 @@ SetNode.prototype = {
 
   printProps: function () {
     console.log();
-    console.log(this.value);
+    console.log("Value: " + this.value);
     console.log(this.parent !== null ? "has parent" : "(no parents)");
-    console.log(this.getNameOfSetImIn());
+    console.log("Set: " + this.getNameOfSetImIn());
   },
 };
 
 // node example.js
 
-var set1 = new SetNode(1, "Set 1");
+var set1 = new SetNode("Set 1");
 set1.printProps();
 
-var child = new SetNode("a");
-child.parent = set1;
-child.printProps();
+var child1 = new SetNode("child 1");
+child1.parent = set1;
+child1.printProps();
 
-var set2 = new SetNode(2, "Set 2");
+var set2 = new SetNode("Set 2");
 set2.printProps();
 
-var child2 = new SetNode("b");
+var child2 = new SetNode("child 2");
 child2.parent = set2;
 child2.printProps();
 
-var child3 = new SetNode("c");
+var child3 = new SetNode("child 3");
 child3.parent = child2;
 child3.printProps();
 
