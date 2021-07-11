@@ -17,8 +17,12 @@ SetNode.prototype = {
   unionInto: function (setToMergeInto) {
     // TODO: detect taller tree, merge into that one
     // for now: merge this set into setToMergeInto
-    this.parent = setToMergeInto;
     this.setName = null;
+    if (!this.parent) {
+      this.parent = setToMergeInto;
+    } else {
+      this.parent.unionInto(setToMergeInto);
+    }
   },
 
   printProps: function () {
