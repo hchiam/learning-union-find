@@ -49,6 +49,8 @@ var child3 = new SetNode("child 3");
 child3.parent = child2;
 child3.printProps();
 
+console.log("\nunion Set 1 and Set 2");
+
 set1.unionInto(set2);
 set1.printProps();
 console.log(set1.getNameOfSetImIn());
