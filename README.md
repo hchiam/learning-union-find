@@ -36,20 +36,20 @@ This is my attempt to better summarize my earlier notes:
 
 Using the union-find data structure is motivated by the disadvantages with other ways to implement sets:
 
-- if you turn each set into a dictionary of its elements:
+- if you turn each **set** into a **dictionary** of its elements:
   - :) `O(n)` for getting all elements in a set
   - :) `O(n)` for getting set unions and set intersections, and `O(log n)` for search, _if you implement the dictionary with sorted keys_
   - :( `O(kn)` for checking which set an element is in
-- if you turn each element into an array of bits that indicate which set the element is in:
+- if you turn each **element** into an **array of bits** that indicate which set the element is in:
   - :) `O(1)` for checking which set an element is in
   - :) `O(1)` for changing which set an element is in
   - :( `O(m + n)` for getting set unions and set intersections (to identify and update at least one set's elements)
-- if you put each element into a binary tree with a field that indicates which set the element is in:
+- if you put each **element** into a **binary tree** with a **field** that indicates which set the element is in:
   - :) `O(dictionary search)` for checking which set an element is in
   - :) `O(dictionary search)` for changing which set an element is in
   - :( `O(slow)` for getting set unions and set intersections (typically not fast enough)
 
-Meanwhile for the union-find data structure:
+Meanwhile for the **union-find data structure**:
 
 - :) `O(log n)` for checking which set an element is in,
   - or [near `O(1)`](https://en.wikipedia.org/wiki/Disjoint-set_data_structure#:~:text=near%20constant%20amortized%20time) if you use path compression ("flatten" the tree so all children directly point to the parent root)
