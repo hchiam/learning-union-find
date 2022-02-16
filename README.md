@@ -2,6 +2,8 @@
 
 Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
+AKA [disjoint-set data structure or merge–find set](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
+
 ## Why
 
 Implement sets with fast set membership checks (`O(log n)` or near `O(1)`) _and_ fast set unions/intersections (near `O(1)`).
