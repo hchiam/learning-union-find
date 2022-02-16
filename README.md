@@ -4,7 +4,7 @@ Just one of the things I'm learning. <https://github.com/hchiam/learning>
 
 ## Why
 
-Implement sets with fast set membership checks _and_ fast set unions/intersections.
+Implement sets with fast set membership checks (`O(log n)` or near `O(1)`) _and_ fast set unions/intersections (near `O(1)`).
 
 ## How
 
